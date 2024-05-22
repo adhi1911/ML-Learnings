@@ -25,37 +25,40 @@
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example"
+            aria-label="Large select example" name = "car_brand" id = "car_brand"
           >
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
+          {% for company in companies %}
+            <option value="{{company}}">{{company}}</option>
+          {% endfor %}
           </select>
           <label for="select-car-model" class="models">
             <h3>Car model</h3>
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example"
+            aria-label="Large select example" name = "car_model" id = "car_model"
           >
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
+          {% for company in companies %}
+          <option value="{{company}}">{{company}}</option>
+        {% endfor %}
+            
           </select>
           <label for="select-car-model" class="year">
             <h3>Year of purchase</h3>
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example"
+            aria-label="Large select example" name = "year" id = "year"
           >
             <option selected>Open this select menu</option>
             <option value="1">One</option>
           </select>
           <label for="select-car-model" class="fuletype">
-            <h3>Fule type</h3>
+            <h3>Fuel type</h3>
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example"
+            aria-label="Large select example" name = "fuel_type" id = "fuel_type"
           >
             <option selected>Open this select menu</option>
             <option value="1">One</option>
