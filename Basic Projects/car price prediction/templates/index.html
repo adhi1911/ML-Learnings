@@ -25,8 +25,8 @@
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example" name = "car_brand" id = "car_brand"
-            onchange="load_car_model(this.value, 'car_model')"
+            aria-label="Large select example" name = "car_brands" id = "car_brands"
+            onchange="load_car_model('car_brands', 'car_models')"
           >
           {% for company in companies %}
             <option value="{{company}}">{{company}}</option>
@@ -37,10 +37,10 @@
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example" name = "car_model" id = "car_model"
+            aria-label="Large select example" name = "car_models" id = "car_models"
           >
-          {% for company in companies %}
-          <option value="{{company}}">{{company}}</option>
+          {% for car_model in car_models %}
+          <option value="{{car_model}}">{{car_model}}</option>
         {% endfor %}
             
           </select>
@@ -49,10 +49,11 @@
           </label>
           <select
             class="form-select form-select-lg mb-3"
-            aria-label="Large select example" name = "year" id = "year"
+            aria-label="Large select example" name = "years" id = "years"
           >
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
+          {% for year in years %}
+          <option value="{{year}}">{{year}}</option>
+        {% endfor %}
           </select>
           <label for="select-car-model" class="fuletype">
             <h3>Fuel type</h3>
@@ -69,13 +70,34 @@
             class="btn btn-primary btn-lg submit-btn"
             onclick=""
           >
-            Submit
+            Predict
           </button>
         </form>
       </div>
     </div>
     
+     <!-- <script>
+
+      function load_car_model(this.id , car_model_id){
+    let companies = document.getElementById(this.id)
+    let carModel = document.getElementById(car_model_id)
+    console.log(companies)
+    carModel.innerHTML = ''
+    {% for company in companies %}
+        if (companies == '{{company}}'){
+          {% for model in companies[company] %}
+          carModel.innerHTML += `<option value="{{model}}">{{model}}</option>`
+          {% endfor %}
+        }
+        {% endfor %} 
      
+}
+        
+        
+     
+     
+
+     </script> -->
 
     
     <script src="static\script.js"></script>

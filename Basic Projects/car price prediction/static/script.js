@@ -1,9 +1,25 @@
-const submitbtn = document.querySelectorAll('submitbtn');
 
-function load_car_model(value ,  car_model){
-    let compaies = document.getElementById('value.value')
-    let carModel = document.getElementById('car_model')
-     
+
+
+
+
+
+
+function load_car_model(companyId, carModelId) {
+    let companySelect = document.getElementById(companyId);
+    let carModelSelect = document.getElementById(carModelId);
+
+    fetch('/get_car_models', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `company=${encodeURIComponent(companySelect.value)}`,
+    })
+    .then(response => response.text())
+    .then(data => {
+        carModelSelect.innerHTML = data;
+    });
 }
 
 
@@ -13,8 +29,3 @@ function load_car_model(value ,  car_model){
 
  
 
-function submit() {
-    submitbtn.addEventListener('click', () => { 
-        console.log('clicked');
-    });
-}
