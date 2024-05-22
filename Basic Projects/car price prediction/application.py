@@ -2,7 +2,7 @@ from flask import Flask,render_template, request
 import pandas as pd
 from flask import request
 
-car = pd.read_csv("cleaned_car_data.csv")
+car = pd.read_csv("ML-Learnings\Basic Projects\car price prediction\cleaned_car_data.csv")
 
 
 app = Flask(__name__)
@@ -24,6 +24,18 @@ def get_car_models():
     company = request.form['company']
     car_models = load_car_model(company)  # replace with your function
     return render_template('car_model_options.html', car_models=car_models)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    company = request.form['car_brand']
+    car_model = request.form['car_model']
+    year = int(request.form['year'])
+    driven = int(request.form['km_driven'])
+    fuel_type = request.form['fuel_type']
+    print(company,car_model,year,driven,fuel_type)
+    
+    
+
 
 
 if __name__ == '__main__':
