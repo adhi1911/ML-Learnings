@@ -1,3 +1,29 @@
+### Equation 7-1. Weighted error rate of the j predictor
+
+\[ r_j = \sum_{i=1}^{m} w(i) \cdot \mathbb{1}( \hat{y}_j(i) \neq y(i) ) \]
+
+where \( \hat{y}_j(i) \) is the \( j \)-th predictor’s prediction for the \( i \)-th instance.
+
+### Equation 7-2. Predictor weight
+
+\[ \alpha_j = \eta \log \left( \frac{1 - r_j}{r_j} \right) \]
+
+### Equation 7-3. Weight update rule
+
+For \( i = 1, 2, \ldots, m \):
+
+\[ w(i) \leftarrow \begin{cases} 
+w(i) & \text{if } \hat{y}_j(i) = y(i) \\
+w(i) \exp(\alpha_j) & \text{if } \hat{y}_j(i) \neq y(i)
+\end{cases} \]
+
+### Equation 7-4. AdaBoost predictions
+
+\[ \hat{y}(x) = \arg\max_k \sum_{j=1}^{N} \alpha_j \cdot \mathbb{1}( \hat{y}_j(x) = k ) \]
+
+where \( N \) is the number of predictors.
+
+
 ## Example Question
 
 Consider a small dataset with 4 instances and 2 features. We have 2 weak classifiers (predictors) and their predictions for each instance. The initial weights for each instance are equal.
