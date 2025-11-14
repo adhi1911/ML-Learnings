@@ -9,12 +9,14 @@ class LossFunction:
     @staticmethod 
     def mse(predictions, targets):
         """Mean Squared Error Loss"""
-        return np.mean((predictions - targets) ** 2)
+        squared_errors = [(pred -tgt) **2 for pred, tgt in zip(predictions, targets)]
+        return np.mean(squared_errors)
     
     @staticmethod
     def mae(predictions, targets):
         """Mean Absolute Error Loss"""
-        return np.mean(np.abs(predictions - targets))
+        absolute_errors = [abs(pred - tgt) for pred, tgt in zip(predictions, targets)]
+        return np.mean(absolute_errors)
     
 
     @staticmethod
@@ -29,7 +31,7 @@ class LossFunction:
     
 
     @staticmethod 
-    def loss(name):
+    def get_loss_function(name):
         map = {
             'mse': LossFunction.mse,
             'mae': LossFunction.mae,
