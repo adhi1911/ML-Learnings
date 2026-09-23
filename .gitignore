@@ -1,1 +1,16 @@
-/dump
+# Environments
+**/venv/
+**/.venv/
+**/env/
+
+# Python & Jupyter
+**/__pycache__/
+*.py[cod]
+**/.ipynb_checkpoints/
+
+# System & OS
+Thumbs.db
+.DS_Store
+
+# Secrets
+**/.env

@@ -1,0 +1,12 @@
+This is a sample text file for RAG pipeline testing.
+It contains random information about machine learning and AI.
+
+Machine learning (ML) is a field of artificial intelligence (AI) that enables computers to learn from data and improve their performance over time without being explicitly programmed. ML algorithms are used in a wide variety of applications, such as email filtering, speech recognition, computer vision, and recommendation systems.
+
+Deep learning, a subset of ML, uses neural networks with many layers to model complex patterns in data. These models have achieved state-of-the-art results in tasks like image classification, natural language processing, and game playing.
+
+Key concepts in ML include supervised learning, unsupervised learning, reinforcement learning, and transfer learning. Supervised learning involves training a model on labeled data, while unsupervised learning deals with finding patterns in unlabeled data. Reinforcement learning is based on agents learning to make decisions by receiving rewards or penalties.
+
+AI and ML are rapidly evolving fields, with new research and applications emerging every day. The integration of ML into business and society is transforming industries and creating new opportunities for innovation.
+
+End of sample1.txt

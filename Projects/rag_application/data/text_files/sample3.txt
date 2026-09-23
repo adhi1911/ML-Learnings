@@ -1,0 +1,13 @@
+Sample document for RAG demo.
+Random facts: The sky is blue. Python is a popular programming language.
+
+---
+
+Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+
+The language is widely used in data science, machine learning, web development, automation, and scientific computing. Its extensive standard library and vibrant ecosystem of third-party packages make it a top choice for developers and researchers.
+
+Fun fact: The name "Python" was inspired by the British comedy group Monty Python, not the snake.
+
+---
+End of sample3.txt

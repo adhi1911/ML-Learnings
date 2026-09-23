@@ -1,0 +1,11 @@
+Another example file for retrieval-augmented generation experiments.
+This file discusses the basics of data retrieval and document storage.
+
+
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with generative models to produce more accurate and contextually relevant responses. In a typical RAG pipeline, a retriever fetches relevant documents from a large corpus, and a generator uses these documents to generate answers or summaries.
+
+Document storage systems can be based on traditional databases, NoSQL solutions, or specialized vector databases that support efficient similarity search. Popular vector databases include FAISS, Pinecone, and Milvus. These systems store document embeddings, which are high-dimensional representations of text, enabling fast retrieval based on semantic similarity.
+
+RAG models are widely used in question answering, chatbots, and knowledge management systems. They help bridge the gap between static knowledge bases and dynamic, generative AI models, providing up-to-date and factually grounded information.
+
+End of sample2.txt
